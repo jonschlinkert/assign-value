@@ -1,0 +1,59 @@
+{
+  "name": "assign-value",
+  "description": "Extend a value or deeply nested property of an object using object path notation.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/assign-value",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/assign-value",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/assign-value/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "extend-shallow": "^2.0.0",
+    "get-value": "^1.1.5",
+    "is-extendable": "^0.1.1",
+    "set-value": "^0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "assign",
+    "dot",
+    "extend",
+    "get",
+    "has",
+    "merge",
+    "nested",
+    "notation",
+    "object",
+    "path",
+    "prop",
+    "property",
+    "set",
+    "value"
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "assign-value",
+        "set-value",
+        "get-value",
+        "union-value",
+        "has-value"
+      ]
+    }
+  }
+}
