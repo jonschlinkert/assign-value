@@ -1,6 +1,6 @@
 {
   "name": "assign-value",
-  "description": "Extend a value or deeply nested property of an object using object path notation.",
+  "description": "Assign a value or extend a deeply nested property of an object using object path notation.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/assign-value",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",

@@ -1,6 +1,6 @@
 # assign-value [![NPM version](https://badge.fury.io/js/assign-value.svg)](http://badge.fury.io/js/assign-value)
 
-> Extend a value or deeply nested property of an object using object path notation.
+> Assign a value or extend a deeply nested property of an object using object path notation.
 
 ## Install
 
