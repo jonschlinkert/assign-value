@@ -18,6 +18,12 @@ describe('assign', function () {
     obj.foo.should.eql({a: 'b'});
   });
 
+  it('should work for key/value pairs:', function () {
+    var obj = {};
+    assign(obj, 'foo', 'b');
+    obj.foo.should.equal('b');
+  });
+
   it('should extend an existing value:', function () {
     var obj = {foo: {a: 'b'}};
     assign(obj, 'foo', {c: 'd'})
@@ -31,9 +37,9 @@ describe('assign', function () {
     obj.a.b.c.should.eql({one: 'two', three: 'four'});
   });
 
-  it('should throw an error:', function () {
+  it('should throw an error when invalid args are passed:', function () {
     (function () {
       assign();
-    }).should.throw('assign-value expects the first argument to be an object.');
+    }).should.throw('expected the first argument to be an object.');
   });
 });

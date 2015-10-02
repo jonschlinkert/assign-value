@@ -1,23 +1,27 @@
 'use strict';
 
-var isObject = require('is-extendable');
-var extend = require('extend-shallow');
-var get = require('get-value');
-var set = require('set-value');
+var utils = require('./utils');
 
-module.exports = function assignValue(obj, prop, value) {
-  if (!isObject(obj)) {
-    throw new TypeError('assign-value expects the first argument to be an object.');
+module.exports = function assign(obj, prop, value) {
+  if (!utils.isObject(obj)) {
+    throw new TypeError('expected the first argument to be an object.');
   }
 
   if (typeof prop === 'undefined' && typeof value === 'undefined') {
     return obj;
   }
 
-  if (typeof value === 'undefined' && isObject(prop)) {
-    return extend(obj, prop);
+  if (typeof value === 'undefined' && utils.isObject(prop)) {
+    return utils.extend(obj, prop);
   }
 
-  set(obj, prop, extend({}, get(obj, prop), value));
+  if (typeof value === 'string') {
+    utils.set(obj, prop, value);
+    return obj;
+  }
+
+  var current = utils.get(obj, prop);
+  var val = utils.extend({}, current, value);
+  utils.set(obj, prop, val);
   return obj;
 };
